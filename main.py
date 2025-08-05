@@ -34,7 +34,7 @@ def handle_start(message):
 def handle_car_selection(call):
     car_index = int(call.data.split("_")[1])
     car = cars[car_index]
-    bot.send_message(call.message.chat.id, f"Вы выбрали: {car['name']}
+    bot.send_message(call.message.chat.id, f"Вы выбрали: {car['name']}")
 Цена: {car['price']}/день
 Залог: {car['deposit']}")
     bot.send_message(call.message.chat.id, "Выберите дату начала аренды:", reply_markup=generate_calendar())
